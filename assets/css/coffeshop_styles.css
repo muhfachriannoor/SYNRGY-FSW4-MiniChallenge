@@ -1,0 +1,93 @@
+@import url('https://fonts.cdnfonts.com/css/playfair-display-sc');
+
+body {
+  font-family: 'Playfair Display SC', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li a {
+  display: inline-block;
+  margin-inline: 20px;
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.icon-right {}
+
+.icon-right img {
+  margin-inline: 10px;
+}
+
+#header {
+  margin-top: 100px;
+}
+
+.content-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-text .title {
+  width: 60%;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 76.8px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.content-text .sub-title {
+  width: 55%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+}
+
+.button-link {
+  border-radius: 0px 32px 0px 32px;
+  padding: 24px 48px 24px 48px;
+  color: #fff;
+  background-color: #6D1600;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.content-image {
+  margin-top: 100px;
+}
+
+.content-image img {
+  margin-inline: 5px;
+}
