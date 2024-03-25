@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CoffeShop</title>
   <link rel="stylesheet" href="assets/css/coffeshop_styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -27,24 +30,81 @@
     </nav>
   </header>
   <main>
-    <section id="header">
-      <div class="container">
-        <div class="content-text">
-          <h3 class="title">Enjoy Your Favorite Coffe with Ngopi</h3>
-          <p class="sub-title">Discover tranquility at Ngopi a sanctuary for unwinding,
-            where your evenings are perfected with relaxation and rich flavors.</p>
-          <a href="#" class="button-link">Explore Product</a>
-        </div>
-        <div class="content-image">
-          <img src="assets/img/coffeshop/Rectangle-1.png" alt="">
-          <img src="assets/img/coffeshop/Rectangle-2.png" alt="">
-          <img src="assets/img/coffeshop/Rectangle-3.png" alt="">
-          <img src="assets/img/coffeshop/Rectangle-4.png" alt="">
-          <img src="assets/img/coffeshop/Rectangle-5.png" alt="">
+
+    <!--HomePage-->
+    <section class="home__page">
+      <div class="home__header">
+          <h1 class="home__text">Enjoy Your Favorite
+             <br> Coffee with Ngopi</h1>
+          <p class="home__paragraph">Discover tranquility at Ngopi a sanctuary for unwinding,
+             <br> where your evenings are perfected with relaxation and rich flavors.</p>
+          <a class="button__home button_flex">
+              Explore Product<img class="button__icon" src=".\assets\icons\ArrowDownRight.svg">
+          </a>
+      </div>
+
+      <div >
+          <img src=".\assets\img\coffeshop\Home-Img.png" class="home__gambar" alt="">
+      </div>
+
+      <div class="home__line"></div>
+
+      <div class="home__social">
+        <div class="social__section">
+
+          <div class="social_proof">
+            <h1 class="social__number">     30+       </h1>
+            <div class="social_description"> Coffee Variant</div>
+          </div>
+
+          <div class="social_proof">
+            <h1 class="social__number">     20+       </h1>
+            <div class="social_description"> Meeting room</div>
+          </div>
+
+          <div class="social_proof">
+            <h1 class="social__number">     25+       </h1>
+            <div class="social_description"> Event space</div>
+          </div>
+
+          <div class="social_proof">
+            <h1 class="social__number">     40+       </h1>
+            <div class="social_description"> Global Achievment</div>
+          </div>
+
         </div>
       </div>
-    </section>
+
+      <div class="home__line"></div>
+  </section>
+
+  
+      
   </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+    items:4,
+    dots:true,
+    margin:20,
+    loop:true,
+})
+      });
+  </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 
 </html>
