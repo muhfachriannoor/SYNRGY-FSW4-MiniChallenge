@@ -90,3 +90,41 @@ nav li a {
 .content-image img {
   margin-inline: 5px;
 }
+
+/* TESTIMONIAL */
+
+
+.testimonial h4.title {
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 56%;
+  margin-bottom: -40px;
+  margin-top: 5rem;
+
+}
+.testimonial p.sub-title {
+  font-size: 36px;
+  font-weight: 400;
+}
+.box {
+  width: 405px;
+  height: 360px;
+  padding: 24px 40px 24px 40px;
+  align-items: center;
+}
+.profile {
+  display: flex;
+  align-items: center;
+
+}
+.profile img {
+  padding: 10px 2rem;
+}
+
+.box p {
+  width: 325px;
+}
+
+.swiper-pagination {
+  --swiper-pagination-color: #6D1600;
+}
