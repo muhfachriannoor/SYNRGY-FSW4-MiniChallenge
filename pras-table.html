@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON to Table</title>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.0.0/dist/css/materialize.min.css"
+    />
+</head>
+<body>
+
+<table id="jsonTable" border="1">
+
+</table>
+
+<script>
+  function jsonToTable(jsonData) {
+    var table = document.getElementById("jsonTable");
+    var header = "<tr>";
+    for (var key in jsonData[0]) {
+      header += "<th>" + key + "</th>";
+    }
+    header += "</tr>";
+    table.innerHTML = header;
+
+    for (var i = 0; i < jsonData.length; i++) {
+      var row = "<tr>";
+      for (var key in jsonData[i]) {
+        row += "<td>" + jsonData[i][key] + "</td>";
+      }
+      row += "</tr>";
+      table.innerHTML += row;
+    }
+  }
+
+  async function fetchData(url) {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      // Data contains the contents of the JSON file as a JavaScript object
+      console.log(data);
+      jsonToTable(data);
+    } catch (error) {
+      console.error('error', error);
+    }
+  }
+
+  fetchData('books.json')
+</script>
+
+</body>
+</html>
