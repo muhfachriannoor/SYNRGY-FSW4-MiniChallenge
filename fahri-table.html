@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="data-table" border="1">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>ISBN</th>
+          <th>Title</th>
+          <th>Subtitle</th>
+          <th>Author</th>
+          <th>Published</th>
+          <th>Pages</th>
+          <th>Description</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $.getJSON("books.json", function (data) {
+          var tableBody = $("#data-table tbody");
+          $.each(data, function (index, person) {
+            var row = $("<tr></tr>");
+
+            row.append($("<td></td>").text(index + 1));
+            row.append($("<td></td>").text(person.isbn));
+            row.append($("<td></td>").text(person.title));
+            row.append($("<td></td>").text(person.subtitle));
+            row.append($("<td></td>").text(person.author));
+            row.append($("<td></td>").text(person.published));
+            row.append($("<td></td>").text(person.pages));
+            row.append($("<td></td>").text(person.description));
+            row.append($("<td></td>").text(person.website));
+
+            tableBody.append(row);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
