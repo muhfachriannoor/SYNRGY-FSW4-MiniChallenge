@@ -17,17 +17,17 @@
 
 <script>
   function jsonToTable(jsonData) {
-    var table = document.getElementById("jsonTable");
-    var header = "<tr>";
-    for (var key in jsonData[0]) {
+    let table = document.getElementById("jsonTable");
+    let header = "<tr>";
+    for (let key in jsonData[0]) {
       header += "<th>" + key + "</th>";
     }
     header += "</tr>";
     table.innerHTML = header;
 
-    for (var i = 0; i < jsonData.length; i++) {
-      var row = "<tr>";
-      for (var key in jsonData[i]) {
+    for (let i = 0; i < jsonData.length; i++) {
+      let row = "<tr>";
+      for (let key in jsonData[i]) {
         row += "<td>" + jsonData[i][key] + "</td>";
       }
       row += "</tr>";
